@@ -40,7 +40,7 @@ function Circulo ()
 
     alambre = circunferencia * 3;
 
-    alert(`La cantidad de metros de alambre es ${alambre}`);
+    alert(`La cantidad de metros de alambre es ${alambre.toFixed(2)}`);
 }
 function Materiales () 
 {
