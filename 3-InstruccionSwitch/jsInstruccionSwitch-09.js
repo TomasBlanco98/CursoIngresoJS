@@ -1,6 +1,11 @@
+/* 
+Tomas Blanco Rivas-Div x
+*/
 function mostrar()
 {
-	var estacionIngresada =txtIdEstacion.value;
-	alert(estacionIngresada);
+	let estacion;
+	let destino;
 
+	estacion = document.getElementById("txtIdEstacion").value;
+	destino = document.getElementById("txtIdDestino").value;
 }//FIN DE LA FUNCIÓN

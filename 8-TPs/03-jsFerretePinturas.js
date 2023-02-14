@@ -26,5 +26,5 @@ function CentigradosFahrenheit ()
     centigrado = parseFloat(centigrado);
 
     fahrenheit = centigrado * 1.8 + 32;
-    alert(`${centigrado} Centígrados son ${fahrenheit} fahrenheit`);
+    alert(`${centigrado} Centígrados son ${fahrenheit.toFixed(2)} fahrenheit`);
 }

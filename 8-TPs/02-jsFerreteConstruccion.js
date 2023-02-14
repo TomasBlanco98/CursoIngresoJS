@@ -18,7 +18,7 @@ function Rectangulo ()
     largo = parseFloat(largo);
     ancho = parseFloat(ancho);
     
-    perimetro = 2 * largo + 2 * ancho;
+    perimetro = (largo + ancho) * 2;
 
     alambre = perimetro * 3;
 
@@ -60,5 +60,5 @@ function Materiales ()
     bolsasCemento = area * 2;
     bolsasCal = area * 3;
 
-    alert(`Se necesitan ${bolsasCemento} bolsas de cemento y ${bolsasCal} bolsas de cal`);
+    alert(`Se necesitan ${bolsasCemento.toFixed(2)} bolsas de cemento y ${bolsasCal.toFixed(2)} bolsas de cal`);
 }
