@@ -4,6 +4,7 @@ Tomas Blanco Rivas-Div x
 function mostrar()
 {
 	let destino;
+	let mensaje;
 
 	destino = document.getElementById("txtIdDestino").value;
 	
@@ -11,10 +12,12 @@ function mostrar()
 	{
 		case "Bariloche":
 		case "Ushuaia":
-			alert("FRIO");
+			mensaje = "FRIO";
 			break;
-		default:
-			alert("CALOR");
+		case "Mar del plata":
+		case "Cataratas":
+			mensaje = "CALOR";
 			break;
 	}
+	alert(mensaje);
 }//FIN DE LA FUNCIÓN

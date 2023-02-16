@@ -5,22 +5,24 @@ Tomas Blanco Rivas-Div x
 function mostrar()
 {
 	let destino;
+	let mensaje;
 
 	destino = document.getElementById("txtIdDestino").value;
 
 	switch(destino)
 	{
 		case "Bariloche":
-			alert("Oeste");
+			mensaje = "Oeste";
 			break;
 		case "Cataratas":
-			alert("Norte");
+			mensaje = "Norte";
 			break;
 		case "Mar del plata":
-			alert("Este");
+			mensaje = "Este";
 			break;
-		default:
-			alert("Sur");
+		case "Ushuaia":
+			mensaje = "Sur";
 			break;
 	}
+	alert(mensaje)
 }//FIN DE LA FUNCIÓN

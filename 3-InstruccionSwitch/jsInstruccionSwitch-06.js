@@ -11,6 +11,27 @@ function mostrar()
 
 	horaDelDia = parseInt(document.getElementById("txtIdHora").value)
 
+	if(horaDelDia >= 7 && horaDelDia <= 11)
+	{
+		alert("Es de mañana");
+	}
+	else if(horaDelDia >= 12 && horaDelDia <= 19)
+	{
+		alert("Es de tarde");
+	}
+	else if(horaDelDia >= 0 && horaDelDia <= 24)
+	{
+		alert("Es de noche");
+	}
+	else 
+	{
+		alert("La hora no existe");
+	}
+	
+	// let horaDelDia;
+
+	// horaDelDia = parseInt(document.getElementById("txtIdHora").value)
+
 	// switch(horaDelDia)
 	// {
 	// 	case 7:
@@ -48,20 +69,4 @@ function mostrar()
 	// 		alert("La hora no existe");
 	// 		break;
 	// }
-
-	if(horaDelDia >= 7 && horaDelDia <= 11)
-	{
-		alert("Es de mañana");
-	}
-	else if(horaDelDia >= 12 && horaDelDia <= 19)
-	{
-		alert("Es de tarde");
-	}
-	else if(horaDelDia <= 24 && horaDelDia >= 0)
-	{
-		alert("Es de noche");
-	}
-	else {
-		alert("La hora no existe");
-	}
 }//FIN DE LA FUNCIÓN
