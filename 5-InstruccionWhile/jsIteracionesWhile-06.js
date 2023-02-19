@@ -1,22 +1,21 @@
+/* Al presionar el botón pedir 5 números e informar la suma acumulada y el promedio.
+Tomas Blanco Rivas-Div x */
 function mostrar()
 {
-	let contador;
-	let acumulador;
 	let numeroIngresado;
-	let suma;
-	let promedio;
-	let i;
+	let acumulador;
+	let contador;
 
 	contador = 0;
 	acumulador = 0;
-	i = 0;
 
-	while(i < 5)
+	while(contador < 5)
 	{
 		numeroIngresado = parseInt(prompt("Ingrese un numero"));
-		i = i + 1;
+		acumulador += numeroIngresado;
+		contador++;
 	}
 
-	document.getElementById("txtIdSuma").value = suma;
-	document.getElementById("txtIdPromedio").value = promedio;
+	document.getElementById("txtIdSuma").value = acumulador;
+	document.getElementById("txtIdPromedio").value = acumulador / contador;
 }//FIN DE LA FUNCIÓN

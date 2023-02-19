@@ -11,7 +11,6 @@ function mostrar()
 	while(i > 0)
 	{
 		alert(`numero ${i}`);
-		i = i - 1;
+		i--;
 	}
-
 }//FIN DE LA FUNCIÓN
