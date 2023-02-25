@@ -14,4 +14,9 @@ function mostrar()
 		i = i + 1;
 		alert(`Numero ${i}`);
 	}
+
+	// for(i = 0; i < 10; i++)
+	// {
+	// 	console.log(`Numero ${i}`);
+	// }
 }//FIN DE LA FUNCIÓN

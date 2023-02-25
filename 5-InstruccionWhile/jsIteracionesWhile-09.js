@@ -1,28 +1,29 @@
 /*
 Al presionar el botón pedir  números  hasta que el usuario quiera,
-mostrar el número máximo y el número mínimo ingresado.*/
+mostrar el número máximo y el número mínimo ingresado.
+Tomas Blanco Rivas-Div x */
 function mostrar()
 {	
 	let numeroIngresado;
 	let numeroMaximo;
 	let numeroMinimo;
 	let respuesta;
+	let bandera;
 
-	numeroIngresado = parseInt(prompt("Ingrese un número"))
-	numeroMaximo = numeroIngresado;
-	numeroMinimo = numeroIngresado;
-	respuesta = prompt("¿Desea continuar? presiona 's' para si y 'n' para no");
+	bandera = false;
+	respuesta = 's';
 
 	while(respuesta == 's')
 	{
 		numeroIngresado = parseInt(prompt("Ingrese un número"))
-		if(numeroIngresado < numeroMinimo)
+		if(bandera == false || numeroIngresado < numeroMinimo)
 		{
 			numeroMinimo = numeroIngresado;
 		}
-		else if(numeroIngresado > numeroMaximo)
+		if(bandera == false || numeroIngresado > numeroMaximo)
 		{
 			numeroMaximo = numeroIngresado;
+			bandera = true;
 		}
 		respuesta = prompt("¿Desea continuar? presiona 's' para si y 'n' para no");
 	}
