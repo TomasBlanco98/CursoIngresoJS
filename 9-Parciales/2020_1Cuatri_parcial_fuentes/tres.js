@@ -23,6 +23,7 @@ function mostrar()
 	cantidadHombresViudos = 0;
 	cantidadTemperaturaAlta = 0;
 	edadHombresSolteros = 0;
+	promedio = 0;
 
 	while(respuesta == 's')
 	{
@@ -76,7 +77,10 @@ function mostrar()
 		}
 		respuesta = prompt("Desea continuar? s/n");
 	}
-	promedio = edadHombresSolteros / cantidadHombresSolteros;
+	if(cantidadHombresSolteros > 0)
+	{
+		promedio = edadHombresSolteros / cantidadHombresSolteros;
+	}
 
 	document.write(`La persona con mayor temperatura corporal es ${nombreMayorTemperatura}<br>`);
 	document.write(`Hay ${cantidadViudos} personas viudas mayores de edad<br>`);

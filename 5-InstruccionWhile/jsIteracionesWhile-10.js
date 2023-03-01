@@ -59,11 +59,11 @@ function mostrar()
 		respuesta=prompt("¿Desea continuar? presiona 's' para si y 'n' para no");
 	}
 
-	if (contadorPositivos != 0)
+	if (contadorPositivos > 0)
 	{
 		promedioPositivos = sumaPositivos / contadorPositivos;
 	}
-	if (contadorNegativos != 0)
+	if (contadorNegativos > 0)
 	{
 		promedioNegativos = sumaNegativos / contadorNegativos;
 	}
@@ -75,7 +75,13 @@ function mostrar()
 	document.write(`la cantidad de negativos es: ${contadorNegativos}<br>`);
 	document.write(`la cantidad de ceros es: ${contadorCero}<br>`);
 	document.write(`la cantidad de numeros pares es: ${contadorPares}<br>`);
-	document.write(`el promedio de negativos es: ${promedioNegativos}<br>`);
-	document.write(`el promedio de positivos es: ${promedioPositivos}<br>`);
+	if(!isNaN(promedioNegativos))
+	{
+		document.write(`el promedio de negativos es: ${promedioNegativos}<br>`);
+	}
+	if(!isNaN(promedioPositivos))
+	{
+		document.write(`el promedio de positivos es: ${promedioPositivos}<br>`);
+	}
 	document.write(`la diferencia es: ${diferencia}`);
 }//FIN DE LA FUNCIÓN
