@@ -5,12 +5,63 @@ Tomas Blanco Rivas-Div x*/
 
 function mostrar()
 {	
-	let nombreIngresado;
-	let edadIngresada;
+	// INICIO WHILE
+	while(respuesta = 's')
+	{
 
-	nombreIngresado = document.getElementById("txtIdNombre").value;
-	edadIngresada = document.getElementById("txtIdEdad").value;
+		respuesta = prompt("Desea continuar? (s/n)");
+	}
 
-	alert("Usted se llama " + nombreIngresado + " y tiene " + edadIngresada + " años");
+	// INICIO FOR
+	for(i = 0; i < cantidadVeces; i++)
+	{
+
+	}
+
+	// VALIDACIÓN SEXO
+	sexo = prompt("Ingrese el sexo (f/m/nb)");
+		while(sexo != 'f' && sexo != 'm' && sexo != 'nb')
+		{
+			sexo = prompt("Ingrese el sexo (f/m/nb)");
+		}
+
+	// VALIDACIÓN EDAD (entre dos parámetros numeros)
+	edad = parseInt(prompt("Ingrese una edad mayor a 18"));
+	while(edad < 18 || edad > 120)
+	{
+		edad = parseInt(prompt("Ingrese una edad mayor a 18"));
+	}
+
+	// VALIDACIÓN MAXIMO / MINIMO
+	if(banderaMaximo == true || precioMaximo < precio)
+	{
+		precioMaximo = precio;
+		banderaMaximo = false;
+	}
+	if(banderaMinimo == true || precioMinimo > precio)
+	{
+		precioMinimo = precio;
+		banderaMinimo = false;
+	}
+
+	// COMPARAR CONTADORES
+	if(contadorCasa > contadorDpto && contadorCasa > contadorQuinta)
+	{
+		viviendaMasElegida = "casa";
+	}
+	else if(contadorDpto > contadorQuinta)
+	{
+		viviendaMasElegida = "dpto";
+	}
+	else
+	{
+		viviendaMasElegida = "quinta";
+	}
+
+	// PROMEDIO IS NAN
+	if(!isNaN(promedioEdad))
+    {
+        document.write(`${promedioEdad.toFixed(2)}`);
+    }
 }
 
